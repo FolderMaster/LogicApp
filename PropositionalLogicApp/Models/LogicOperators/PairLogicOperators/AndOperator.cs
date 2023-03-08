@@ -9,5 +9,7 @@
         public string Char => "AND";
 
         public bool Bool => LeftOperand.Bool && RightOperand.Bool;
+
+        public override string ToString() => $"{LeftOperand} & {RightOperand}";
     }
 }

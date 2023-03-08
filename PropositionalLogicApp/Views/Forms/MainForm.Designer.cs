@@ -28,20 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.MainTab = new PropositionalLogicApp.Views.Tabs.MainTab();
             this.SuspendLayout();
+            // 
+            // MainTab
+            // 
+            this.MainTab.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainTab.Location = new System.Drawing.Point(0, 0);
+            this.MainTab.Name = "MainTab";
+            this.MainTab.Padding = new System.Windows.Forms.Padding(3);
+            this.MainTab.Size = new System.Drawing.Size(800, 450);
+            this.MainTab.TabIndex = 0;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.MainTab);
             this.Name = "MainForm";
             this.Text = "PropositionalLogicApp";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private Tabs.MainTab MainTab;
     }
 }
 

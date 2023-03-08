@@ -4,28 +4,26 @@ namespace PropositionalLogicApp.Models.LogicVariables
 {
     public class BoolVariable : ILogicVariable
     {
+        private string _name;
+
         private bool _value = false;
 
-        public object Value
+        public string Name
         {
-            get => _value;
-            set
-            {
-                if(value is bool boolValue)
-                {
-                    _value = boolValue;
-                }
-                else
-                {
-                    throw new ArgumentException();
-                }
-            }
+            get => _name;
+            set => _name = value;
         }
 
-        public Type Type => typeof(bool);
+        public string TypeName => "Bool";
 
-        public string Name => "Bool";
+        public bool Value
+        {
+            get => _value;
+            set => _value = value;
+        }
 
         public bool Bool => _value;
+
+        public override string ToString() => Name;
     }
 }

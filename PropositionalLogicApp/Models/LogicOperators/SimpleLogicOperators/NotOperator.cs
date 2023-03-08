@@ -7,5 +7,7 @@
         public string Char => "NOT";
 
         public bool Bool => !Operand.Bool;
+
+        public override string ToString() => $"!{Operand}";
     }
 }
